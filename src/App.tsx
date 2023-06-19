@@ -1,7 +1,6 @@
 import "./App.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { BsFillClipboard2Fill } from "react-icons/bs";
 
 function App() {
   const dbCreateStr = "TestEntities3 db = new TestEntities3();";
