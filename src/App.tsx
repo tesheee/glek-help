@@ -1,6 +1,7 @@
 import "./App.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { BsFillClipboard2Fill } from "react-icons/bs";
 
 function App() {
   const dbCreateStr = "TestEntities3 db = new TestEntities3();";
@@ -210,6 +211,17 @@ function App() {
         <h3>Или</h3>
         <SyntaxHighlighter wrapLines={true} language="csharp" style={oneLight}>
           {`newUsers = newUsers.FindAll(x => x.name.Contains(nameFilter.Text));`}
+        </SyntaxHighlighter>
+        <h3>Или</h3>
+        <SyntaxHighlighter wrapLines={true} language="csharp" style={oneLight}>
+          {`try
+{
+  Info.ItemsSource = db.Users1.Where(user => user.name == SearchInput.Text).ToList();
+}
+catch (Exception)
+{
+  Console.WriteLine("Error");
+}`}
         </SyntaxHighlighter>
       </div>
       <h2>Доп. фичи</h2>
