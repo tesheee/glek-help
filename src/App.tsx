@@ -91,6 +91,11 @@ function App() {
   <Setter Property="FontFamily" Value="Verdana" />
 </Style>`;
 
+  const frameExampleStr = `internal class FrameObject
+{
+    static public Frame frameObj = new Frame();
+}`;
+
   return (
     <div className="container">
       <div>
@@ -202,6 +207,10 @@ function App() {
         <SyntaxHighlighter wrapLines={true} language="csharp" style={oneLight}>
           {searchMethodStr}
         </SyntaxHighlighter>
+        <h3>Или</h3>
+        <SyntaxHighlighter wrapLines={true} language="csharp" style={oneLight}>
+          {`newUsers = newUsers.FindAll(x => x.name.Contains(nameFilter.Text));`}
+        </SyntaxHighlighter>
       </div>
       <h2>Доп. фичи</h2>
       <div>
@@ -216,6 +225,24 @@ function App() {
           {styleExampleStr}
         </SyntaxHighlighter>
       </div>
+      <h4>Пример применения стиля</h4>
+      <img src="https://sun9-34.userapi.com/impg/tb7t58gLDmT6sm3AkGxA3NMCDlozCa3LDaWNiQ/IvEPXgrXg-s.jpg?size=305x85&quality=96&sign=b6ebc26422319be689593cd803481402&type=album"></img>
+      <h3>Создание фрейма (страницы)</h3>
+      <h4>Пример применения фрейма</h4>
+      <SyntaxHighlighter wrapLines={true} language="csharp" style={oneLight}>
+        {`<Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>`}
+      </SyntaxHighlighter>
+      <h4>Затем создаётся класс</h4>
+      <img src="https://sun9-10.userapi.com/impg/LJM0ISh-ERZFYA4t4exFLzXv3haQTar369W5AA/C1gmKkAQ2tU.jpg?size=334x64&quality=96&sign=254fc20186f17b0c70af8660553429b0&type=album"></img>
+      <h4>Код внутри класса</h4>
+      <SyntaxHighlighter wrapLines={true} language="csharp" style={oneLight}>
+        {frameExampleStr}
+      </SyntaxHighlighter>
+      <h4>Применение фрейма</h4>
+      <SyntaxHighlighter wrapLines={true} language="csharp" style={oneLight}>
+        {`FrameObj.frameObj = MainFrame;`}
+      </SyntaxHighlighter>
+      <br></br>
     </div>
   );
 }
